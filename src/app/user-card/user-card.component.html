@@ -1,0 +1,12 @@
+<!-- 
+    Pipes - use to transform data: uppercase, lowercase, date, currency, decimal, percent
+    tempalte: {{ value | pipe}} 
+-->
+
+<div class="card">
+    <p>Name: {{user.name | uppercase}}</p>
+    <p>Surname: {{user.surname | uppercase}}</p>
+    <p>Address: {{user.address | lowercase}}</p>
+    <p>Birthdate: {{user.birthdate | date:'longDate'}}</p>
+    <p>Premium: {{user.premium | currency}}</p>
+</div>

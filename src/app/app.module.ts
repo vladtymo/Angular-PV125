@@ -1,11 +1,13 @@
+import { UserCardComponent } from './user-card/user-card.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import { AppComponent } from './app/app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserCardComponent
   ],
   imports: [
     BrowserModule
