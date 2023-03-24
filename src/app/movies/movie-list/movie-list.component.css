@@ -1,0 +1,21 @@
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    background-color: lightblue;
+    padding: 10px;
+    margin-bottom: 4px;
+    border-radius: 5px;
+}
+
+ul li.new-movie {
+    color: white;
+    background-color: rgb(108, 80, 9);
+}
+
+ul li:hover {
+    filter: brightness(80%);
+    cursor: pointer;
+}

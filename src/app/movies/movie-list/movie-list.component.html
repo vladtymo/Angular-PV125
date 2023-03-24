@@ -1,0 +1,16 @@
+<!-- structural directives: *ngIf *ngFor *ngSwitch -->
+
+<!-- *ngIf="contidion; else elseBlock" -->
+<p *ngIf="movies.length == 0; else countBlock">No movies in the cinema yet!</p>
+<ng-template #countBlock>
+    <p>We have {{movies.length}} movies in the cimena collection!</p>
+</ng-template>
+
+<!-- attribute directives: [class.name]="condition" -->
+
+<ul>
+    <!-- *ngFor="let name of collection" -->
+    <li *ngFor="let m of movies" [class.new-movie]="m.isCurrent == true">
+        {{m.title}}: {{m.genres.join("/")}}, {{m.duration}}
+    </li>
+</ul>
