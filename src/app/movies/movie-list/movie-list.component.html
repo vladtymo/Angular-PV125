@@ -10,7 +10,8 @@
 
 <ul>
     <!-- *ngFor="let name of collection" -->
-    <li *ngFor="let m of movies" [class.new-movie]="m.isCurrent == true">
+    <li *ngFor="let m of movies" [class.new-movie]="m.isCurrent == true" (click)="switchCurrentStatus(m)"
+        (dblclick)="deleteMovie(m)">
         {{m.title}}: {{m.genres.join("/")}}, {{m.duration}}
     </li>
 </ul>

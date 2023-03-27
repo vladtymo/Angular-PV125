@@ -19,4 +19,13 @@ export class MovieListComponent {
       { title: "The Fast and the Furious", genres: ["Crime", "Adventure"], year: 2001, duration: "1:46", isCurrent: false }
     ];
   }
+
+  switchCurrentStatus(movie: IMovie): void {
+    movie.isCurrent = !movie.isCurrent;
+  }
+  deleteMovie(movie: IMovie): void {
+
+    let index = this.movies.indexOf(movie);
+    this.movies.splice(index, 1);
+  }
 }
