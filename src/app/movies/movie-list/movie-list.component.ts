@@ -11,6 +11,12 @@ export class MovieListComponent {
 
   movies: IMovie[];
 
+  movie: IMovie = {
+    title: "",
+    year: 0,
+    isCurrent: true
+  };
+
   constructor() {
     this.movies = [
       { title: "Wrath of Man", genres: ["Action", "Crime"], year: 2021, duration: "1:58", isCurrent: false },
@@ -20,6 +26,10 @@ export class MovieListComponent {
     ];
   }
 
+  addMovie(): void {
+
+    this.movies.push({ ...this.movie });
+  }
   switchCurrentStatus(movie: IMovie): void {
     movie.isCurrent = !movie.isCurrent;
   }

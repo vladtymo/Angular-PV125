@@ -1,3 +1,37 @@
+<!-- [ngModel]="property" - two-way binding -->
+<h4>Create New Movie</h4>
+<div>
+    <span>Title: </span>
+    <input [(ngModel)]="movie.title" type="text">
+</div>
+<div>
+    <span>Year: </span>
+    <input [(ngModel)]="movie.year" type="number">
+</div>
+<div>
+    <span>Current: </span>
+    <input [(ngModel)]="movie.isCurrent" type="checkbox">
+</div>
+<div>
+    <span>Duration: </span>
+    <input [(ngModel)]="movie.duration" type="time">
+</div>
+<div>
+    <span>Ganres: </span>
+    <select [(ngModel)]="movie.genres" multiple>
+        <option>Action</option>
+        <option>Drama</option>
+        <option>Comedy</option>
+        <option>Sci-Fi</option>
+        <option>Survival</option>
+        <option>Thriller</option>
+    </select>
+</div>
+<div>
+    <button (click)="addMovie()">Add</button>
+</div>
+
+<h4>Movie List</h4>
 <!-- structural directives: *ngIf *ngFor *ngSwitch -->
 
 <!-- *ngIf="contidion; else elseBlock" -->
@@ -12,7 +46,7 @@
     <!-- *ngFor="let name of collection" -->
     <li *ngFor="let m of movies" [class.new-movie]="m.isCurrent == true" (click)="switchCurrentStatus(m)"
         (dblclick)="deleteMovie(m)">
-        {{m.title}}: {{m.genres.join("/")}}, {{m.duration}}
+        {{m.title}}: {{m.genres?.join("/")}}, {{m.duration}}
     </li>
 </ul>
 
