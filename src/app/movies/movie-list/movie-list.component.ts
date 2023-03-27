@@ -28,4 +28,10 @@ export class MovieListComponent {
     let index = this.movies.indexOf(movie);
     this.movies.splice(index, 1);
   }
+  sortByYear(): void {
+    this.movies.sort((a, b) => a.year - b.year);
+  }
+  clear(): void {
+    this.movies.splice(0);
+  }
 }
