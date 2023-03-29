@@ -6,7 +6,10 @@
     <hr>
 
     <h2>Movie Catalogue</h2>
-    <app-movie-list></app-movie-list>
+    <app-movie-list [movies]="allMovies"></app-movie-list>
+
+    <h2>New Movies</h2>
+    <app-movie-list [movies]="newMovies"></app-movie-list>
 
     <!--<hr>
     <h2>Admin User</h2>
