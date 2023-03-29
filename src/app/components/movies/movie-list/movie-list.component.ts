@@ -1,4 +1,4 @@
-import { IMovie } from './../movie';
+import { IMovie } from '../movie';
 import { Component } from '@angular/core';
 import { Time } from '@angular/common';
 
