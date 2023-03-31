@@ -1,0 +1,17 @@
+<mat-card class="movie-card">
+    <mat-card-header>
+        <div mat-card-avatar class="movie-header-image"></div>
+        <mat-card-title>{{movie?.title}}</mat-card-title>
+        <mat-card-subtitle>{{movie?.genres?.join(' / ')}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image
+        src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg"
+        alt="Movie Image">
+    <!-- <mat-card-content>
+        <p>
+        </p>
+    </mat-card-content> -->
+    <mat-card-actions>
+        <button mat-button [routerLink]="['/movie-details', movie?.id]">DETAILS</button>
+    </mat-card-actions>
+</mat-card>

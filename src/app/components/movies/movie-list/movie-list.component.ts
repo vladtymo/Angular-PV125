@@ -13,6 +13,7 @@ export class MovieListComponent {
   movies: IMovie[] = [];
 
   movie: IMovie = {
+    id: 0,
     title: "",
     year: 0,
     isCurrent: true
