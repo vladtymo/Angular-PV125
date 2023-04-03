@@ -1,6 +1,7 @@
 import { IMovie } from '../movie';
 import { Component, Input } from '@angular/core';
 import { Time } from '@angular/common';
+import { MOVIES } from '../movies-mock-data';
 
 @Component({
   selector: 'app-movie-list',
@@ -10,7 +11,7 @@ import { Time } from '@angular/common';
 export class MovieListComponent {
 
   @Input()
-  movies: IMovie[] = [];
+  movies: IMovie[] = MOVIES;
 
   movie: IMovie = {
     id: 0,
